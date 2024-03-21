@@ -10,16 +10,26 @@ using System.Windows.Forms;
 
 namespace clipping
 {
+
     public partial class home : Form
     {
+        public static ApplicationContext main_form;   //メインフォーム用の変数   
+
         public home()
         {
             InitializeComponent();
         }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Program.Display_store();
+            this.Close();
+        }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            Program.Display_view();
+            this.Close();
         }
+
     }
 }

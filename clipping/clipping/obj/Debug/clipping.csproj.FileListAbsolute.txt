@@ -9,3 +9,4 @@ D:\clipping\clipping\clipping\obj\Debug\clipping.exe
 D:\clipping\clipping\clipping\obj\Debug\clipping.pdb
 D:\clipping\clipping\clipping\obj\Debug\clipping.home.resources
 D:\clipping\clipping\clipping\obj\Debug\clipping.store.resources
+D:\clipping\clipping\clipping\obj\Debug\clipping.view.resources

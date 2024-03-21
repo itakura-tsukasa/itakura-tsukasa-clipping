@@ -16,5 +16,16 @@ namespace clipping
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Program.Display_home();
+            this.Close();
+        }
+
+        private void view_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
