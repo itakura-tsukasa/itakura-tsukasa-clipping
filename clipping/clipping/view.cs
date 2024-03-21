@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace clipping
 {
-    public partial class Form1 : Form
+    public partial class view : Form
     {
-        public Form1()
+        public view()
         {
             InitializeComponent();
         }

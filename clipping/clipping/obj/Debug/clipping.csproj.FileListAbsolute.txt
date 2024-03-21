@@ -1,0 +1,11 @@
+D:\clipping\clipping\clipping\bin\Debug\clipping.exe.config
+D:\clipping\clipping\clipping\bin\Debug\clipping.exe
+D:\clipping\clipping\clipping\bin\Debug\clipping.pdb
+D:\clipping\clipping\clipping\obj\Debug\clipping.csprojAssemblyReference.cache
+D:\clipping\clipping\clipping\obj\Debug\clipping.Properties.Resources.resources
+D:\clipping\clipping\clipping\obj\Debug\clipping.csproj.GenerateResource.cache
+D:\clipping\clipping\clipping\obj\Debug\clipping.csproj.CoreCompileInputs.cache
+D:\clipping\clipping\clipping\obj\Debug\clipping.exe
+D:\clipping\clipping\clipping\obj\Debug\clipping.pdb
+D:\clipping\clipping\clipping\obj\Debug\clipping.home.resources
+D:\clipping\clipping\clipping\obj\Debug\clipping.store.resources
