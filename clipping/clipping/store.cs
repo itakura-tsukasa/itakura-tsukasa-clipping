@@ -25,7 +25,13 @@ namespace clipping
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            if(textBox1.TextLength == 0)
+            {
+                MessageBox.Show("タイトルを入力してください",
+                    "エラー",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
         }
     }
 }
