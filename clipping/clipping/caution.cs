@@ -10,22 +10,18 @@ using System.Windows.Forms;
 
 namespace clipping
 {
-    public partial class store : Form
-    {
-        public store()
+    public partial class caution : Form
+    { 
+
+        public caution(string s)
         {
             InitializeComponent();
+            label1.Text = s;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Program.Display_home();
             this.Close();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

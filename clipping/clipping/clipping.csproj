@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="caution.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="caution.Designer.cs">
+      <DependentUpon>caution.cs</DependentUpon>
+    </Compile>
     <Compile Include="view.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="caution.resx">
+      <DependentUpon>caution.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="home.resx">
       <DependentUpon>home.cs</DependentUpon>
     </EmbeddedResource>
