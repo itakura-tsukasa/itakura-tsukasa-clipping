@@ -55,17 +55,27 @@ namespace clipping
 
         private void XMLWriteArticle (string title,string body,string source)
         {
-            
-            XElement xml = XElement.Load(@"./clip_article.xml");
+            try
+            {
+                XElement xml = XElement.Load(@"./clip_article.xml");
 
-            XElement data = new XElement("article",
-                new XElement("title", title),
-                new XElement("body", body),
-                new XElement("source", source));
+                XElement data = new XElement("article",
+                    new XElement("title", title),
+                    new XElement("body", body),
+                    new XElement("source", source));
 
-            xml.Add(data);
+                xml.Add(data);
 
-            xml.Save(@"./clip_article.xml");
+                xml.Save(@"./clip_article.xml");
+            }catch(Exception e)
+            {
+                MessageBox.Show(e.Message, "エラー",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            MessageBox.Show("保存完了", "成功",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
