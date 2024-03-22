@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Linq;
 using System.Xml.Linq;
 
 
@@ -15,6 +14,8 @@ namespace clipping
 {
     public partial class store : Form
     {
+        private const string xmlFilePath = "./clip_article.xml";
+
         public store()
         {
             InitializeComponent();
@@ -57,16 +58,19 @@ namespace clipping
         {
             try
             {
-                XElement xml = XElement.Load(@"./clip_article.xml");
+                XElement xml = XElement.Load(xmlFilePath);
+
+                DateTime dt = DateTime.Now;
 
                 XElement data = new XElement("article",
                     new XElement("title", title),
                     new XElement("body", body),
-                    new XElement("source", source));
+                    new XElement("source", source),
+                    new XElement("time",dt.ToString("yyyy/MM/dd")));
 
                 xml.Add(data);
 
-                xml.Save(@"./clip_article.xml");
+                xml.Save(xmlFilePath);
             }catch(Exception e)
             {
                 MessageBox.Show(e.Message, "エラー",
