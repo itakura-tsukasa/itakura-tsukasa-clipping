@@ -19,16 +19,35 @@ namespace clipping
         {
             InitializeComponent();
 
-            //XElement xml = XElement.Load(xmlFilePath);
+            //xmlファイル読み込み;
+            XElement xml = XElement.Load(xmlFilePath);
 
-            //IEnumerable<XElement> infos = from item in xml.Elements("article")
-            //                          select item;
+            IEnumerable<XElement> infos = from item in xml.Elements("article")
+                                      select item;
 
-            //listView1.Items.Clear();
+            listView1.Items.Clear();
 
-            listView1.Items.Add(new ListViewItem(new string[] { "5", "6", "7" }));
-            listView1.Items.Add(new ListViewItem(new string[] { "5", "6", "7" }));
-            listView1.Items.Add(new ListViewItem(new string[] { "5", "6", "7" }));
+            //listViewに登録;
+            foreach (XElement i in infos)
+            {
+                //データ取得;
+                XElement title = i.Element("title");
+                XElement body = i.Element("body");
+                XElement time = i.Element("time");
+
+                string head;
+                //本文が全角10文字よりなら10文字取り出し、後ろに...をつける;
+                if(body.Value.Length > 20)
+                {
+                    head = body.Value.Substring(0, 10);
+                    head += "...";
+                }else{
+                    head = body.Value;
+                }
+
+                //listViewに書き込み;
+                listView1.Items.Add(new ListViewItem(new string[] {title.Value,head,time.Value }));
+            }
 
         }
 
@@ -38,5 +57,14 @@ namespace clipping
             this.Close();
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ListView.SelectedListViewItemCollection nowSelect = listView1.SelectedItems;
+            if (nowSelect.Count == 0)
+            {
+                MessageBox.Show("閲覧したいクリップを選択してください", "エラー",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
