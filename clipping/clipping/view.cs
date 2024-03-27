@@ -34,6 +34,7 @@ namespace clipping
                 XElement title = i.Element("title");
                 XElement body = i.Element("body");
                 XElement time = i.Element("time");
+                XElement index = i.Element("serial");
 
                 string head;
                 //本文が全角10文字よりなら10文字取り出し、後ろに...をつける;
@@ -46,7 +47,7 @@ namespace clipping
                 }
 
                 //listViewに書き込み;
-                listView1.Items.Add(new ListViewItem(new string[] {title.Value,head,time.Value }));
+                listView1.Items.Add(new ListViewItem(new string[] { title.Value, head, time.Value, index.Value }));
             }
 
         }
