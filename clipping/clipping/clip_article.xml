@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<clipArticles>
+	<!--articleはメモの実体-->
+	    <!--serialは通し番号-->
+	    <!--titleは題名-->
+	    <!--bodyは本文-->
+		<!--sourceは情報ソース-->
+		<!--timeは保存日時-->
+    <article>
+		<serial>1</serial>
+        <title>agsd</title>
+        <body>ahgehga</body>
+        <source>ahrahdra</source>
+        <time>2024/03/22</time>
+    </article>
+</clipArticles>

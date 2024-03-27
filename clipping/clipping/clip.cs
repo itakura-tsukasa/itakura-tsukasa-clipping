@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace clipping
 {
-    public partial class Form1 : Form
+    public partial class clip : Form
     {
-        public Form1()
+        public clip()
         {
             InitializeComponent();
+            this.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

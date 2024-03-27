@@ -60,9 +60,15 @@ namespace clipping
             {
                 XElement xml = XElement.Load(xmlFilePath);
 
+                //連番取得
+                IEnumerable <XElement> article =  from item in xml.Elements("article") select item;
+                IEnumerable<XElement> serial = from item in article.Elements("serial") select item;
+                var maxnum = serial.Select(e => int.Parse(e.Value)).Max();
+
                 DateTime dt = DateTime.Now;
 
                 XElement data = new XElement("article",
+                    new XElement("serial",maxnum + 1),
                     new XElement("title", title),
                     new XElement("body", body),
                     new XElement("source", source),
